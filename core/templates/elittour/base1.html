@@ -80,34 +80,36 @@
         {% endblock article %}
 
         <div id="content">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            {% include 'elittour/items/sitemenu.html' %}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h1>Бесплатный поиск туров</h1>
-                            <div class="responsive">
-                                <script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/85540/find_tour_form?style=default&conf=default"></script>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                {% include 'elittour/items/sitemenu.html' %}
                             </div>
-                            <h1>При самостоятельном подборе тура - скидка 5%</h1>
                         </div>
                     </div>
-                    <div>
-                         {% include 'elittour/items/central.html' %}
-                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h1>Бесплатный поиск туров</h1>
+                                <div class="responsive">
+                                    <script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/85540/find_tour_form?style=default&conf=default"></script>
+                                </div>
+                                <h1>При самостоятельном подборе тура - скидка 5%</h1>
+                            </div>
+                        </div>
+                        <div>
+                             {% include 'elittour/items/central.html' %}
+                        </div>
 
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div>
-                                {% include 'elittour/items/right_cont.html' %}
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div>
+                                    {% include 'elittour/items/right_cont.html' %}
+                                </div>
                             </div>
                         </div>
                     </div>

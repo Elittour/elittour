@@ -50,37 +50,39 @@
         {% endblock article %}
 
         <div id="content">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            {% include 'elittour/items/sitemenu.html' %}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h1>Трансфер в аэропорт и на железнодорожный вокзал</h1>
-                            <p> <img src="{{ STATIC_URL }}elittour/img/menu/27.jpg" hspace="20" vspace="10" alt="" align="left"><br>Опытные водители на иномарках доставят Вас в Домодедово, Внуково и Шереметьево.</p>
-                            <p class="p-select"><br>Наши цены лучшие в городе</p>
-                            <p><br>При покупке тура стоимостью свыше 100т.р мы предоставляем Вам трансфер в аэропорт бесплатно</p>
-                        </div>
-                        <div class="panel-body">
-                           <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
-                                <b style="font-size: 25px">Нужен трансфер?  ЗВОНИТЕ!</b>
-                                <h3>8 (903) 548-03-40</h3>
-                                <h3>8 (4967)75-96-70 </h3>
-                                <h3>8 (925) 738-91-07</h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                {% include 'elittour/items/sitemenu.html' %}
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div>
-                                {% include 'elittour/items/right_cont.html' %}
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h1>Трансфер в аэропорт и на железнодорожный вокзал</h1>
+                                <p> <img src="{{ STATIC_URL }}elittour/img/menu/27.jpg" hspace="20" vspace="10" alt="" align="left"><br>Опытные водители на иномарках доставят Вас в Домодедово, Внуково и Шереметьево.</p>
+                                <p class="p-select"><br>Наши цены лучшие в городе</p>
+                                <p><br>При покупке тура стоимостью свыше 100т.р мы предоставляем Вам трансфер в аэропорт бесплатно</p>
+                            </div>
+                            <div class="panel-body">
+                               <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
+                                    <b style="font-size: 25px">Нужен трансфер?  ЗВОНИТЕ!</b>
+                                    <h3>8 (903) 548-03-40</h3>
+                                    <h3>8 (4967)75-96-70 </h3>
+                                    <h3>8 (925) 738-91-07</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div>
+                                    {% include 'elittour/items/right_cont.html' %}
+                                </div>
                             </div>
                         </div>
                     </div>
