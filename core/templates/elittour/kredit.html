@@ -50,37 +50,39 @@
         {% endblock article %}
 
         <div id="content">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            {% include 'elittour/items/sitemenu.html' %}
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                {% include 'elittour/items/sitemenu.html' %}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-						    <h1>Продажа туров в кредит</h1>
-							<p><img src="{{ STATIC_URL }}elittour/img/uslugi/kredit.jpg" hspace="20" vspace="10" alt="" align="left">При желании Вы можете оформить рассрочку или кредит на покупку тура.</p>
-							<p>Проценты за Вас платит турагентство. Условия выгодны и понятны.</p>
-							<p class="p-select">Сначала отдыхай - потом плати!</p> 
-						</div>	
-						<div class="panel-body">
-                            <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
-                                <b style="font-size: 25px">Нужен кредит?  ЗВОНИТЕ!</b>
-                                <h3>8 (903) 548-03-40</h3>
-                                <h3>8 (4967)75-96-70 </h3>
-                                <h3>8 (925) 738-91-07</h3>
-                            </div>
-						</div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+    						    <h1>Продажа туров в кредит</h1>
+    							<p><img src="{{ STATIC_URL }}elittour/img/uslugi/kredit.jpg" hspace="20" vspace="10" alt="" align="left">При желании Вы можете оформить рассрочку или кредит на покупку тура.</p>
+    							<p>Проценты за Вас платит турагентство. Условия выгодны и понятны.</p>
+    							<p class="p-select">Сначала отдыхай - потом плати!</p> 
+    						</div>	
+    						<div class="panel-body">
+                                <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
+                                    <b style="font-size: 25px">Нужен кредит?  ЗВОНИТЕ!</b>
+                                    <h3>8 (903) 548-03-40</h3>
+                                    <h3>8 (4967)75-96-70 </h3>
+                                    <h3>8 (925) 738-91-07</h3>
+                                </div>
+    						</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div>
-                                {% include 'elittour/items/right_cont.html' %}
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div>
+                                    {% include 'elittour/items/right_cont.html' %}
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -50,37 +50,39 @@
         {% endblock article %}
 
         <div id="content">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            {% include 'elittour/items/sitemenu.html' %}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h1>Регистрация на авиарейс</h1>
-                            <p> <img src="{{ STATIC_URL }}elittour/img/menu/29.jpg" hspace="20" vspace="10" alt="" align="left"><p>При покупке тура с авиаперелетом или авиабилета всем клиентам туристического агенства ЭЛИТ-тур предоставляется услуга онлайн-регистрации на авиа рейс.</p>
-							<p>Если вы воспользовались услугой онлайн-регистрации, процедуру регистрации в аэропорту вы можете не проходить:</p>
-							<p>Электронная регистрация избавит Вас от необходимости стоять в длинных очередях, а также позволит выбрать самое удобное место в салоне самолета;</p>
-							<p>C ее помощью можно зарегистрировать багаж, поэтому все, что вам останется сделать по прибытии в аэропорт, — оставить его на специальной стойке багажа (Drop Off) или же сдать его вне очереди на стойке регистрации вашего рейса;</p>
-							<p>Посадочный талон будет по желанию распечатан или отправлен на Вашу электронную почту.</p>
-                            <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
-                                <b style="font-size: 25px">Нужна регистрация?  ЗВОНИТЕ!</b>
-                                <h3>8 (903) 548-03-40</h3>
-                                <h3>8 (4967)75-96-70 </h3>
-                                <h3>8 (925) 738-91-07</h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                {% include 'elittour/items/sitemenu.html' %}
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div>
-                                {% include 'elittour/items/right_cont.html' %}
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h1>Регистрация на авиарейс</h1>
+                                <p> <img src="{{ STATIC_URL }}elittour/img/menu/29.jpg" hspace="20" vspace="10" alt="" align="left"><p>При покупке тура с авиаперелетом или авиабилета всем клиентам туристического агенства ЭЛИТ-тур предоставляется услуга онлайн-регистрации на авиа рейс.</p>
+    							<p>Если вы воспользовались услугой онлайн-регистрации, процедуру регистрации в аэропорту вы можете не проходить:</p>
+    							<p>Электронная регистрация избавит Вас от необходимости стоять в длинных очередях, а также позволит выбрать самое удобное место в салоне самолета;</p>
+    							<p>C ее помощью можно зарегистрировать багаж, поэтому все, что вам останется сделать по прибытии в аэропорт, — оставить его на специальной стойке багажа (Drop Off) или же сдать его вне очереди на стойке регистрации вашего рейса;</p>
+    							<p>Посадочный талон будет по желанию распечатан или отправлен на Вашу электронную почту.</p>
+                                <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
+                                    <b style="font-size: 25px">Нужна регистрация?  ЗВОНИТЕ!</b>
+                                    <h3>8 (903) 548-03-40</h3>
+                                    <h3>8 (4967)75-96-70 </h3>
+                                    <h3>8 (925) 738-91-07</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div>
+                                    {% include 'elittour/items/right_cont.html' %}
+                                </div>
                             </div>
                         </div>
                     </div>
