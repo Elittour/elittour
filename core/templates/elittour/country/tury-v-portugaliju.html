@@ -9,34 +9,36 @@
 {% block content %}
 
     <div id="content">
-    {% block article %}
-     <!--   {{ block.super }}   -->
-    {% endblock article %}
-        <div class="row">
-            <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="responsive">
-                            <div id="df-root">
-                               {% block search %}
-                                    <div class="responsive">
-                                         <div>
-                                            <h1>Подбор тура в Португалию</h1>
+        <div class="container-fluid">
+        {% block article %}
+         <!--   {{ block.super }}   -->
+        {% endblock article %}
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="responsive">
+                                <div id="df-root">
+                                   {% block search %}
+                                        <div class="responsive">
+                                             <div>
+                                                <h1>Подбор тура в Португалию</h1>
+                                             </div>
+                                            <script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/85540/find_tour_form?style=default&conf=portugalija"></script>
+                                            <script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/85540/find_tour_offers?style=default&conf=portugalija-out"></script>
                                          </div>
-                                        <script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/85540/find_tour_form?style=default&conf=portugalija"></script>
-                                        <script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/85540/find_tour_offers?style=default&conf=portugalija-out"></script>
-                                     </div>
-                                 {% endblock search %}
+                                     {% endblock search %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div>
-                            {% include 'elittour/items/right_cont.html' %}
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div>
+                                {% include 'elittour/items/right_cont.html' %}
+                            </div>
                         </div>
                     </div>
                 </div>

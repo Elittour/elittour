@@ -10,9 +10,10 @@
     {% block content %}
 
     <div id="content">
-    {% block article %}
-     <!--   {{ block.super }}   -->
-    {% endblock article %}
+    <div class="container-fluid">
+        {% block article %}
+         <!--   {{ block.super }}   -->
+        {% endblock article %}
         <div class="row">
             <div class="col-md-8">
                 <div class="panel panel-default">
@@ -45,6 +46,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 {% endblock content %}

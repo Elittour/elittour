@@ -9,29 +9,31 @@
 {% block content %}
 
     <div id="content">
-    {% block article %}
-        {{ block.super }}
-    {% endblock article %}
-        <div class="row">
-            <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="responsive">
-                             <div id="df-root"></div>
+        <div class="container-fluid">
+            {% block article %}
+                {{ block.super }}
+            {% endblock article %}
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="responsive">
+                                     <div id="df-root"></div>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div>
+                                    {% include 'elittour/items/right_cont.html' %}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div>
-                            {% include 'elittour/items/right_cont.html' %}
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

@@ -6,10 +6,10 @@
             <div style="float: left; margin: 5px">
                 {% if tour.img %}
                     <a href="{{ MEDIA_URL }}{{ tour.img }}">
-                        <img src="{{ MEDIA_URL }}{{ tour.img }}" width="285">
+                        <img src="{{ MEDIA_URL }}{{ tour.img }}"class="img-responsive" >
                     </a>
                 {% else %}
-                    <img src="{{ STATIC_URL }}img/no_img.png" width="285">
+                    <img src="{{ STATIC_URL }}img/no_img.png"class="img-responsive" >
                 {% endif %}
             </div>
 
@@ -26,10 +26,10 @@
         <div style="float: left; margin: 5px">
             {% if article.img %}
                 <a href="{{ MEDIA_URL }}{{ article.img }}">
-                    <img src="{{ MEDIA_URL }}{{ article.img }}" width="285">
+                    <img src="{{ MEDIA_URL }}{{ article.img }}"class="img-responsive" >
                 </a>
             {% else %}
-                <img src="{{ STATIC_URL }}img/no_img.png" width="285">
+                <img src="{{ STATIC_URL }}img/no_img.png"class="img-responsive" >
             {% endif %}
         </div>
 
