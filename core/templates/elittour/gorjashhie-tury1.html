@@ -1,0 +1,57 @@
+{% extends 'elittour/base.html' %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Горящие туры</title>
+    <link href="{{ STATIC_URL }}elittour/img/favicon.ico" rel="shortcut icon"/>
+{% endblock head %}
+
+{% block content %}
+    <div id="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                              <img src="{{ STATIC_URL }}elittour/img/gorasshie/02-05-1.jpg"style="width: 100%">
+
+                            {% for tour in tours %}
+                                {% if tour.active %}
+                                    {% if forloop.counter != 1 %}<hr>{% endif %}
+                                    <table>
+                                      <tr>
+                                        <td {% if forloop.counter != 1 %}style="padding-top: 20px" {% endif %} width="160">
+                                            {% if tour.img %}
+                                                <a href="{{ MEDIA_URL }}{{ tour.img }}">
+                                                    <img src="{{ MEDIA_URL }}{{ tour.img }}" width="250" style="padding: 10px">
+                                                </a>
+                                            {% else %}
+                                                <img src="{{ STATIC_URL }}img/no_img.png" width="250">
+                                            {% endif %}
+                                        </td>
+                                        <td style="font-size: 20px">
+                                            <p style="color: {{ tour.color_name }}; font-size: 30px"><b>{{ tour.name }}</b></p>
+                                            <p style="color: {{ tour.color_date }};font-size: 25px"><b>{{ tour.date }}</b></p>
+                                            <p>{{ tour.comment }}</p>
+                                            <p style="color: {{ tour.color_price }}; font-size: 32px"><b>Стоимость: </b>{{ tour.price }} <i class="fa fa-ruble"></i> </p>
+                                      </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                        <td>
+                                            {{ tour.description }}
+                                        </td>
+                                        </tr>
+                                    </table>
+                                {% endif %}
+
+                            {% empty %}
+                                <h2></h2>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+{% endblock content %}

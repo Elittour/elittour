@@ -1,0 +1,67 @@
+[18/Feb/2015 21:31:40] ERROR [django.request:224] Internal Server Error: /ajax_add_request/
+Traceback (most recent call last):
+  File "/home/accordweb/webapps/elittour/lib/python2.7/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/accordweb/webapps/elittour/elittour/elittour/ajax.py", line 24, in ajax_add_request
+    ['gorda1990@mail.ru'], fail_silently=False)
+  File "/home/accordweb/webapps/elittour/lib/python2.7/django/core/mail/__init__.py", line 50, in send_mail
+    connection=connection).send()
+  File "/home/accordweb/webapps/elittour/lib/python2.7/django/core/mail/message.py", line 276, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/accordweb/webapps/elittour/lib/python2.7/django/core/mail/backends/smtp.py", line 87, in send_messages
+    new_conn_created = self.open()
+  File "/home/accordweb/webapps/elittour/lib/python2.7/django/core/mail/backends/smtp.py", line 48, in open
+    local_hostname=DNS_NAME.get_fqdn())
+  File "/usr/local/lib/python2.7/smtplib.py", line 256, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python2.7/smtplib.py", line 317, in connect
+    (code, msg) = self.getreply()
+  File "/usr/local/lib/python2.7/smtplib.py", line 368, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+SMTPServerDisconnected: Connection unexpectedly closed
+[18/Feb/2015 21:38:21] DEBUG [django.db.backends:79] (0.736) SELECT "elittour_tour"."id", "elittour_tour"."date", "elittour_tour"."type", "elittour_tour"."description", "elittour_tour"."price", "elittour_tour"."image" FROM "elittour_tour" WHERE "elittour_tour"."type" = '4' ; args=(u'4',)
+[18/Feb/2015 21:38:37] DEBUG [django.db.backends:79] (0.070) SELECT "elittour_personrequest"."id", "elittour_personrequest"."date", "elittour_personrequest"."initials", "elittour_personrequest"."email", "elittour_personrequest"."phone_number", "elittour_personrequest"."message", "elittour_personrequest"."title", "elittour_personrequest"."state" FROM "elittour_personrequest" WHERE ("elittour_personrequest"."phone_number" = ''  AND "elittour_personrequest"."title" = 'Горящие туры'  AND "elittour_personrequest"."date" = '2015-02-18 18:38:37.426431+00:00'  AND "elittour_personrequest"."message" = '16 февраля 2015 г., лд'  AND "elittour_personrequest"."email" = 'hhjkhkjhjkjhk'  AND "elittour_personrequest"."initials" = '' ); args=(u'', u'\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b', u'2015-02-18 18:38:37.426431+00:00', u'16 \u0444\u0435\u0432\u0440\u0430\u043b\u044f 2015 \u0433., \u043b\u0434', u'hhjkhkjhjkjhk', u'')
+[18/Feb/2015 21:38:37] DEBUG [django.db.backends:79] (0.174) INSERT INTO "elittour_personrequest" ("date", "initials", "email", "phone_number", "message", "title", "state") VALUES ('2015-02-18 18:38:37.426431+00:00', '', 'hhjkhkjhjkjhk', '', '16 февраля 2015 г., лд', 'Горящие туры', 'Н') RETURNING "elittour_personrequest"."id"; args=(u'2015-02-18 18:38:37.426431+00:00', u'', u'hhjkhkjhjkjhk', u'', u'16 \u0444\u0435\u0432\u0440\u0430\u043b\u044f 2015 \u0433., \u043b\u0434', u'\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b', u'\u041d')
+[18/Feb/2015 21:47:30] DEBUG [django.db.backends:79] (0.175) SELECT "elittour_tour"."id", "elittour_tour"."date", "elittour_tour"."type", "elittour_tour"."description", "elittour_tour"."price", "elittour_tour"."image" FROM "elittour_tour" WHERE "elittour_tour"."type" = '4' ; args=(u'4',)
+[18/Feb/2015 21:47:37] DEBUG [django.db.backends:79] (0.001) SELECT "elittour_personrequest"."id", "elittour_personrequest"."date", "elittour_personrequest"."initials", "elittour_personrequest"."email", "elittour_personrequest"."phone_number", "elittour_personrequest"."message", "elittour_personrequest"."title", "elittour_personrequest"."state" FROM "elittour_personrequest" WHERE ("elittour_personrequest"."phone_number" = ''  AND "elittour_personrequest"."title" = 'Горящие туры'  AND "elittour_personrequest"."date" = '2015-02-18 18:47:37.945260+00:00'  AND "elittour_personrequest"."message" = '16 февраля 2015 г., лд'  AND "elittour_personrequest"."email" = '444444444444444'  AND "elittour_personrequest"."initials" = '' ); args=(u'', u'\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b', u'2015-02-18 18:47:37.945260+00:00', u'16 \u0444\u0435\u0432\u0440\u0430\u043b\u044f 2015 \u0433., \u043b\u0434', u'444444444444444', u'')
+[18/Feb/2015 21:47:37] DEBUG [django.db.backends:79] (0.000) INSERT INTO "elittour_personrequest" ("date", "initials", "email", "phone_number", "message", "title", "state") VALUES ('2015-02-18 18:47:37.945260+00:00', '', '444444444444444', '', '16 февраля 2015 г., лд', 'Горящие туры', 'Н') RETURNING "elittour_personrequest"."id"; args=(u'2015-02-18 18:47:37.945260+00:00', u'', u'444444444444444', u'', u'16 \u0444\u0435\u0432\u0440\u0430\u043b\u044f 2015 \u0433., \u043b\u0434', u'\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b', u'\u041d')
+[18/Feb/2015 21:48:58] DEBUG [django.db.backends:79] (0.001) SELECT "elittour_tour"."id", "elittour_tour"."date", "elittour_tour"."type", "elittour_tour"."description", "elittour_tour"."price", "elittour_tour"."image" FROM "elittour_tour" WHERE "elittour_tour"."type" = '4' ; args=(u'4',)
+[18/Feb/2015 21:49:04] DEBUG [django.db.backends:79] (0.001) SELECT "elittour_personrequest"."id", "elittour_personrequest"."date", "elittour_personrequest"."initials", "elittour_personrequest"."email", "elittour_personrequest"."phone_number", "elittour_personrequest"."message", "elittour_personrequest"."title", "elittour_personrequest"."state" FROM "elittour_personrequest" WHERE ("elittour_personrequest"."phone_number" = ''  AND "elittour_personrequest"."title" = 'Горящие туры'  AND "elittour_personrequest"."date" = '2015-02-18 18:49:04.362747+00:00'  AND "elittour_personrequest"."message" = '16 февраля 2015 г., лд'  AND "elittour_personrequest"."email" = 'jkjkjjkjk'  AND "elittour_personrequest"."initials" = '' ); args=(u'', u'\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b', u'2015-02-18 18:49:04.362747+00:00', u'16 \u0444\u0435\u0432\u0440\u0430\u043b\u044f 2015 \u0433., \u043b\u0434', u'jkjkjjkjk', u'')
+[18/Feb/2015 21:49:04] DEBUG [django.db.backends:79] (0.000) INSERT INTO "elittour_personrequest" ("date", "initials", "email", "phone_number", "message", "title", "state") VALUES ('2015-02-18 18:49:04.362747+00:00', '', 'jkjkjjkjk', '', '16 февраля 2015 г., лд', 'Горящие туры', 'Н') RETURNING "elittour_personrequest"."id"; args=(u'2015-02-18 18:49:04.362747+00:00', u'', u'jkjkjjkjk', u'', u'16 \u0444\u0435\u0432\u0440\u0430\u043b\u044f 2015 \u0433., \u043b\u0434', u'\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b', u'\u041d')
+[18/Feb/2015 21:52:00] DEBUG [django.db.backends:79] (0.141) SELECT "elittour_tour"."id", "elittour_tour"."date", "elittour_tour"."type", "elittour_tour"."description", "elittour_tour"."price", "elittour_tour"."image" FROM "elittour_tour" WHERE "elittour_tour"."type" = '4' ; args=(u'4',)
+[18/Feb/2015 21:52:35] DEBUG [django.db.backends:79] (0.125) SELECT "elittour_personrequest"."id", "elittour_personrequest"."date", "elittour_personrequest"."initials", "elittour_personrequest"."email", "elittour_personrequest"."phone_number", "elittour_personrequest"."message", "elittour_personrequest"."title", "elittour_personrequest"."state" FROM "elittour_personrequest" WHERE ("elittour_personrequest"."phone_number" = '89266813986'  AND "elittour_personrequest"."title" = 'Горящие туры'  AND "elittour_personrequest"."date" = '2015-02-18 18:52:34.938123+00:00'  AND "elittour_personrequest"."message" = '16 февраля 2015 г., лд'  AND "elittour_personrequest"."email" = 'gorda1990@mail.ru'  AND "elittour_personrequest"."initials" = 'Горда Антон Анатольевич' ); args=(u'89266813986', u'\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b', u'2015-02-18 18:52:34.938123+00:00', u'16 \u0444\u0435\u0432\u0440\u0430\u043b\u044f 2015 \u0433., \u043b\u0434', u'gorda1990@mail.ru', u'\u0413\u043e\u0440\u0434\u0430 \u0410\u043d\u0442\u043e\u043d \u0410\u043d\u0430\u0442\u043e\u043b\u044c\u0435\u0432\u0438\u0447')
+[18/Feb/2015 21:52:35] DEBUG [django.db.backends:79] (0.158) INSERT INTO "elittour_personrequest" ("date", "initials", "email", "phone_number", "message", "title", "state") VALUES ('2015-02-18 18:52:34.938123+00:00', 'Горда Антон Анатольевич', 'gorda1990@mail.ru', '89266813986', '16 февраля 2015 г., лд', 'Горящие туры', 'Н') RETURNING "elittour_personrequest"."id"; args=(u'2015-02-18 18:52:34.938123+00:00', u'\u0413\u043e\u0440\u0434\u0430 \u0410\u043d\u0442\u043e\u043d \u0410\u043d\u0430\u0442\u043e\u043b\u044c\u0435\u0432\u0438\u0447', u'gorda1990@mail.ru', u'89266813986', u'16 \u0444\u0435\u0432\u0440\u0430\u043b\u044f 2015 \u0433., \u043b\u0434', u'\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b', u'\u041d')
+[18/Feb/2015 21:54:29] DEBUG [django.db.backends:79] (0.013) SELECT "elittour_tour"."id", "elittour_tour"."date", "elittour_tour"."type", "elittour_tour"."description", "elittour_tour"."price", "elittour_tour"."image" FROM "elittour_tour" WHERE "elittour_tour"."type" = '4' ; args=(u'4',)
+[18/Feb/2015 21:55:31] DEBUG [django.db.backends:79] (0.115) SELECT "elittour_tour"."id", "elittour_tour"."date", "elittour_tour"."type", "elittour_tour"."description", "elittour_tour"."price", "elittour_tour"."image" FROM "elittour_tour" WHERE "elittour_tour"."type" = '2' ; args=(u'2',)
+[18/Feb/2015 21:55:41] DEBUG [django.db.backends:79] (0.001) SELECT "elittour_tour"."id", "elittour_tour"."date", "elittour_tour"."type", "elittour_tour"."description", "elittour_tour"."price", "elittour_tour"."image" FROM "elittour_tour" WHERE "elittour_tour"."type" = '2' ; args=(u'2',)
+[18/Feb/2015 21:55:46] WARNING [django.request:143] Not Found: /robots.txt
+[18/Feb/2015 22:03:07] DEBUG [django.db.backends:79] (1.347) SELECT "elittour_tour"."id", "elittour_tour"."date", "elittour_tour"."type", "elittour_tour"."description", "elittour_tour"."price", "elittour_tour"."image" FROM "elittour_tour" WHERE EXTRACT('month' FROM "elittour_tour"."date") = 2; args=(2,)
+[18/Feb/2015 22:16:03] WARNING [django.request:143] Not Found: /robots.txt
+[18/Feb/2015 22:16:03] WARNING [django.request:143] Not Found: /mainpic/logo.png
+[18/Feb/2015 23:37:01] WARNING [django.request:143] Not Found: /xmlrpc.php
+[19/Feb/2015 00:06:31] WARNING [django.request:143] Not Found: /wp-content/uploads/2013/02/IMG_0039.jpg
+[19/Feb/2015 00:33:51] WARNING [django.request:143] Not Found: /xmlrpc.php
+[19/Feb/2015 00:34:55] WARNING [django.request:143] Not Found: /robots.txt
+[19/Feb/2015 00:34:55] WARNING [django.request:143] Not Found: /wp-login.php
+[19/Feb/2015 00:34:55] WARNING [django.request:143] Not Found: /robots.txt
+[19/Feb/2015 00:34:55] WARNING [django.request:143] Not Found: /admin/index.php
+[19/Feb/2015 00:34:55] WARNING [django.request:143] Not Found: /bitrix/admin/index.php
+[19/Feb/2015 00:34:55] WARNING [django.request:143] Not Found: /robots.txt
+[19/Feb/2015 00:34:56] WARNING [django.request:143] Not Found: /robots.txt
+[19/Feb/2015 00:34:56] WARNING [django.request:143] Not Found: /robots.txt
+[19/Feb/2015 03:21:55] WARNING [django.request:143] Not Found: /xmlrpc.php
+[19/Feb/2015 04:56:32] WARNING [django.request:143] Not Found: /wp-content/themes/autumn-concept/style.css
+[19/Feb/2015 04:56:32] WARNING [django.request:143] Not Found: /wp-content/plugins/wp-contact-form/wpcf.css
+[19/Feb/2015 04:56:33] WARNING [django.request:143] Not Found: /wp-content/themes/autumn-concept/print.css
+[19/Feb/2015 06:48:10] WARNING [django.request:143] Not Found: /wp-login.php
+[19/Feb/2015 07:03:24] WARNING [django.request:143] Not Found: /robots.txt
+[19/Feb/2015 07:12:28] WARNING [django.request:143] Not Found: /robots.txt
+[19/Feb/2015 07:16:47] WARNING [django.request:143] Not Found: /wp-login.php
+[19/Feb/2015 07:16:47] WARNING [django.request:143] Not Found: /wp-login.php
+[19/Feb/2015 08:52:34] WARNING [django.request:143] Not Found: /404/
+[19/Feb/2015 09:46:04] WARNING [django.request:143] Not Found: /admin/fckeditor/editor
+[19/Feb/2015 09:46:04] WARNING [django.request:143] Not Found: /fckeditor/editor
+[19/Feb/2015 10:06:44] WARNING [django.request:143] Not Found: /robots.txt
+[19/Feb/2015 10:20:37] WARNING [django.request:143] Not Found: /favicon.ico
+[19/Feb/2015 10:20:37] WARNING [django.request:143] Not Found: /favicon.ico
+[19/Feb/2015 10:20:37] WARNING [django.request:143] Not Found: /favicon.ico

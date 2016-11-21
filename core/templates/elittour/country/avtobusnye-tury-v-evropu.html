@@ -1,0 +1,55 @@
+{% extends 'elittour/country/base_contry.html' %}
+{% load bootstrap3 %}
+
+    {% block head %}
+        <meta charset="UTF-8">
+        <title>Автобусные туры по Европе</title>
+        <link href="{{ STATIC_URL }}elittour/img/favicon.ico" rel="shortcut icon"/>
+    {% endblock head %}
+{% block content %}
+
+    <div id="content">
+    {% block article %}
+     <!--   {{ block.super }}   -->
+    {% endblock article %}
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="responsive">
+                            <div id="df-root">
+                               {% block search %}
+                                    <div class="responsive">
+<!--BEGIN OF MODULE BLOCK-->
+  <div id="search_tours"></div>
+  <script> gettoursearch("http://elittour.org/tury-po-stranam/avtobusnye-tury-v-evropu/"); </script>
+  <div id="tours_page_body" class="loading"></div><script>jQuery("#tours_page_body").toursBody({"email": "yerofeeva2011%yandex.ru"});</script>
+<!--END OF MODULE BLOCK-->
+                                     </div>
+                                 {% endblock search %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div>
+                            {% include 'elittour/items/right_cont.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+<div id="tours_page_body" class="loading"></div><script>jQuery("#tours_page_body").toursBody({"email": "yerofeeva2011%yandex.ru"});</script>
+
+
+
+
+
+
+

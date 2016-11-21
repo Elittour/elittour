@@ -1,0 +1,62 @@
+{% extends 'elittour/country/base_contry.html' %}
+{% load bootstrap3 %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Туры по России</title>
+    <link href="{{ STATIC_URL }}elittour/img/favicon.ico" rel="shortcut icon"/>
+{% endblock head %}
+
+{% block content %}
+<div id="content">
+       <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="responsive">
+                            <div id="df-root">
+                               {{% block search %}
+                                    <div class="responsive">
+                                        <div id="df-root"></div>
+                                    </div>
+                                {% endblock search %}
+
+                                {% block js_scripts %}
+                                    {{ block.super }}
+                                    <script>
+                                        (function (d, s, id) {
+                                            var js, dfjs = d.getElementsByTagName(s)[0];
+                                            if (d.getElementById(id)) {
+                                                return;
+                                            }
+                                            js = d.createElement(s);
+                                            js.id = id;
+                                            js.src = "//www.delfin-tour.ru/frame/2259.jss";
+                                            dfjs.parentNode.insertBefore(js, dfjs);
+                                        }(document, 'script', 'df-export'));
+                                    </script>
+                                {% endblock js_scripts %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div>
+                            {% include 'elittour/items/right_cont.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+
+
+
+
+

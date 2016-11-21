@@ -1,0 +1,188 @@
+{% load bootstrap3 %}
+
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    {% block head %}
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+        <link href="{{ STATIC_URL }}elittour/img/favicon.ico" rel="shortcut icon"/>
+    {% endblock head %}
+
+    {% block css_styles %}
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}elittour/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}font-awesome/css/font-awesome.css"/>
+    {% endblock css_styles %}
+
+</head>
+<body>
+{% block body %}
+    <img src="{{ STATIC_URL }}elittour/img/logo2.png" height="100" style="position: absolute; z-index: 5000">
+    {% include 'elittour/items/header.html' %}
+    {% include 'elittour/items/slider.html' %}
+    {% include 'elittour/items/menu.html' %}
+
+        {% block content %}
+        {% block article %}
+            {% if article %}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>
+                            <div style="float: left; margin: 7px">
+                                {% if article.img %}
+                                    <a href="{{ MEDIA_URL }}{{ article.img }}">
+                                        <img src="{{ MEDIA_URL }}{{ article.img }}" width="300">
+                                    </a>
+                                {% else %}
+                                    <img src="{{ STATIC_URL }}img/no_img.png" width="300">
+                                {% endif %}
+                            </div>
+
+                            <p><b>{{ article.name|safe }}</b></p>
+                            <div>{{ article.article|safe }}</div>
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endblock article %}
+
+        <div id="content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            {% include 'elittour/items/sitemenu.html' %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h1>Санаторий на дому</h1>
+                            <p> <img src="{{ STATIC_URL }}elittour/img/uslugi/Dr.Nona.jpg" hspace="20" vspace="10" alt="" align="left"><p><br>Можно устроит себе санаторий на дому с помощью продукции израильской фирмы  DR Nona.</p>
+							<p>Звоните, и мы дадим подробные консультации по оздоровлению и лечению продукцией DR NONA.      </p>
+                        </div>
+                        <div>
+                            <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
+                                <b style="font-size: 25px"></b>
+                                <h3>8 (903) 548-03-40</h3>
+                                <h3>8 (4967)75-96-70 </h3>
+                                <h3>8 (925) 738-91-07</h3>
+                            </div>
+                        </div>
+                        <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
+                              <b style="font-size: 25px"><br>Dr.Nona - живая сила Мертвого моря<br><br></br>
+                            <iframe width="853" height="480" src="https://www.youtube.com/embed/FBzPyx6ttFw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div>
+                                {% include 'elittour/items/right_cont.html' %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block_call" id="callback">
+            <div class="container">
+                <h4>У Вас есть вопросы ?
+                    <small style="color: white">Укажите номер телефона и мы перезвоним вам в ближайшее время</small>
+                </h4>
+
+
+                <div class="input-group">
+                    <span class="input-group-btn" style="width: 50%">
+                        <input type="text" class="form-control" placeholder="Ваше имя">
+                      </span>
+                    <input type="text" class="form-control" placeholder="+79001234567" aria-valuemax="12">
+
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Запросить звонок</button>
+                      </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" style="color: #ff7111;">
+            <h2> Как нас найти? </h2>
+        </div>
+        <div id="basic_map" style="width: 100%;height: 400px"></div>
+    {% endblock content %}
+{% endblock body %}
+{% include 'elittour/items/footer.html' %}
+
+<div id="scroller"><span>наверх</span></div>
+
+
+{% block js_libs %}
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}elittour/js/gmaps.js"></script>
+    <script src="{{ STATIC_URL }}elittour/js/base_scripts.js"></script>
+{% endblock js_libs %}
+
+{% block js_scripts %}
+    <script type="text/javascript">
+        var map = new GMaps({
+            el: '#basic_map',
+            lat: 54.920695,
+            lng: 37.420146,
+            zoom: 16,
+            zoomControl: true,
+            panControl: false
+        });
+        map.drawOverlay({
+            lat: 54.9209,
+            lng: 37.4200,
+            content: '<div class="overlay" onclick="alert();">ЭЛИТ-тур</div>'
+        });
+        map.addMarker({
+            lat: 54.920695,
+            lng: 37.420146,
+            title: 'ЭЛИТ-тур'
+        });
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter32625330 = new Ya.Metrika({
+                        id: 32625330,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {
+                }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+
+
+    </script>
+{% endblock js_scripts %}
+
+</body>
+</html>

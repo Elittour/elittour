@@ -1,0 +1,204 @@
+{% load bootstrap3 %}
+
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    {% block head %}
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+        <link href="{{ STATIC_URL }}elittour/img/favicon.ico" rel="shortcut icon"/>
+    {% endblock head %}
+
+    {% block css_styles %}
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}elittour/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}font-awesome/css/font-awesome.css"/>
+    {% endblock css_styles %}
+
+</head>
+<body>
+{% block body %}
+    <img src="{{ STATIC_URL }}elittour/img/logo2.png" height="100" style="position: absolute; z-index: 5000">
+    {% include 'elittour/items/header.html' %}
+    {% include 'elittour/items/slider.html' %}
+    {% include 'elittour/items/menu.html' %}
+
+        {% block content %}
+        {% block article %}
+            {% if article %}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>
+                            <div style="float: left; margin: 7px">
+                                {% if article.img %}
+                                    <a href="{{ MEDIA_URL }}{{ article.img }}">
+                                        <img src="{{ MEDIA_URL }}{{ article.img }}" width="300">
+                                    </a>
+                                {% else %}
+                                    <img src="{{ STATIC_URL }}img/no_img.png" width="300">
+                                {% endif %}
+                            </div>
+
+                            <p><b>{{ article.name|safe }}</b></p>
+                            <div>{{ article.article|safe }}</div>
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endblock article %}
+
+        <div id="content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            {% include 'elittour/items/sitemenu.html' %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h1>Помощь в подготовке пакета документов на получение загранпаспорта</h1>
+                            <p> <img src="{{ STATIC_URL }}elittour/img//menu/23.jpg" hspace="20" vspace="10" alt="" align="left">Сбор документов и заполнение заявления - анкеты для получения загранпаспорта является сложным и трудоемким процессом. Длительная подготовка различных документов, оплата квитанций, тонкости заполнения бланков и другие подводные камни – все это сопровождает получение загранпаспорта.</p>
+                            <p>Значительно<b> упростить процесс оформления загранпаспорта</b> Вы можете, обратившись за услугами в <b>туристическое агентство ЭЛИТтур.</b></p>
+                            <p>Мы расскажем о том, какие необходимы документы на загранпаспорт нового образца, рассмотрим перечень документов на загранпаспорт нового образца ребенку, а так же требования к их оформлению.</p>
+                            <p>Мы разъясним Вам все правила заполнения заявления на получение загранпаспорта. С нашей помощью можете быть уверены, что Вам не придется переписывать документы несколько раз, и все они будут заполнены правильно.</p>
+                            <p>Наши специалисты дадут Вам ясные и четкие рекомендации по заполнению документов, а также проконсультируют о порядке и процедуре получения загранпаспорта.</p>
+                            <p class="p-select">Оформляете загранпаспорт - документы подготовим мы!</p>
+                            <div class="text-center" style="color: #1F94C0; margin-bottom: 50px">
+                                <b style="font-size: 25px">Нужен загранпаспорт?  ЗВОНИТЕ!</b>
+                                <h3>8 (903) 548-03-40</h3>
+                                <h3>8 (4967)75-96-70 </h3>
+                                <h3>8 (925) 738-91-07</h3>
+                            </div>
+                            <p class="p-select">Перечень документов на загранпаспорт нового образца</p>
+                            <p>Совершеннолетнему и дееспособному гражданину России необходимо представить следующие документы на загранпаспорт нового образца:</p>
+                            <p class="p-select-blue">1. Заявление о выдаче паспорта нового поколения на бумажном носителе в одном экземпляре на бланке установленной формы.</pc>
+                            <p>При невозможности внесения сведений о трудовой деятельности заявителя за последние 10 лет из-за заполнения всех граф в п.14 заявления о выдаче загранпаспорта нового поколения необходимо оформить приложение, в котором указываются сведения о трудовой деятельности, не внесенные в указанный пункт заявления.</p>
+                            <p>Если заявитель ранее изменял свою фамилию, имя и (или) отчества более одного раза, то необходимо так же дополнительно подготовить соответствующее приложение.</p>
+                            <p class="p-select-blue">2. Основной документ, удостоверяющий личность заявителя.</p>
+                            <p>Для граждан РФ, проживающих на территории России, таковым является внутренний паспорт, для граждан РФ, проживающих за пределами России - загранпаспорт. Во втором случае в качестве документа, который удостоверяет личность заявителя, может быть так же представлен внутренний паспорт гражданина РФ, если срок действия его загранпаспорта истёк.</p>
+                            <p class="p-select-blue">3. Квитанция об уплате госпошлины за оформление заграничного паспорта.</p>
+                            <p>Информацию о её реквизитах можно получить на стендах в подразделении ФМС России, в банковских учреждениях или на официальном сайте территориального органа ФМС России (то есть территориального органа (управления, отдела) ФМС России в соответствующем субъекте Российской Федерации) по месту обращения с заявлением о выдаче загранпаспорта нового образца.</p>
+                            <p><span class="p-select-blue">4. Загранпаспорт гражданина РФ</span> - при наличии его у заявителя, если срок действия данного документа не истёк.
+                            <p><span class="p-select-blue">5. Военный билет</span> с отметкой о завершении прохождения военной службы по призыву или альтернативной гражданской службы либо с отметками «не годен к военной службе» или "ограниченно годен к военной службе" – при подаче документов на загранпаспорт нового образца представляется проживающими на территории РФ лицами мужского пола в возрасте от 18 до 27 лет, прошедших, соответственно, военную службу по призыву или альтернативную гражданскую службу либо признанных не годными или ограниченно годными к военной службе по состоянию здоровья.<p>
+                            <p><span class="p-select-blue">6. Разрешение командования</span> – если заявитель является военнослужащим Вооруженных Сил РФ, а также федеральных органов исполнительной власти, в которых предусмотрена военная служба.<p>
+                            <br><p>Мы БЫСТРО и ПРАВИЛЬНО подготовим для Вас необходимые документы на загранпаспорт</p>
+                            <p>ОБРАТИТЕСЬ К НАМ и будьте уверены - придя в отделение УФМС, у Вас НЕ возникнет проблем из-за неправильно заполненного заявления. </p>
+                            <p>При подаче документов на БИОМЕТРИЧЕСКИЙ загранпаспорт, Вы не столкнетесь с проблемой программного обеспечения, с помощью которого заполняется анкета для загранпаспорта!!!</p>
+                            <p>После работы с сотрудниками туристического агентства ЭЛИТтур, вам останется только заверить заявление на загранпаспорт у работодателя и самостоятельно сдать документы в отделение УФМС.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div>
+                                {% include 'elittour/items/right_cont.html' %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="block_call" id="callback">
+            <div class="container">
+                <h4>У Вас есть вопросы ?
+                    <small style="color: white">Укажите номер телефона и мы перезвоним вам в ближайшее время</small>
+                </h4>
+
+
+                <div class="input-group">
+                    <span class="input-group-btn" style="width: 50%">
+                        <input type="text" class="form-control" placeholder="Ваше имя">
+                      </span>
+                    <input type="text" class="form-control" placeholder="+79001234567" aria-valuemax="12">
+
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Запросить звонок</button>
+                      </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" style="color: #ff7111;">
+            <h2> Как нас найти? </h2>
+        </div>
+        <div id="basic_map" style="width: 100%;height: 400px"></div>
+    {% endblock content %}
+{% endblock body %}
+{% include 'elittour/items/footer.html' %}
+
+<div id="scroller"><span>наверх</span></div>
+
+
+{% block js_libs %}
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}elittour/js/gmaps.js"></script>
+    <script src="{{ STATIC_URL }}elittour/js/base_scripts.js"></script>
+{% endblock js_libs %}
+
+{% block js_scripts %}
+    <script type="text/javascript">
+        var map = new GMaps({
+            el: '#basic_map',
+            lat: 54.920695,
+            lng: 37.420146,
+            zoom: 16,
+            zoomControl: true,
+            panControl: false
+        });
+        map.drawOverlay({
+            lat: 54.9209,
+            lng: 37.4200,
+            content: '<div class="overlay" onclick="alert();">ЭЛИТ-тур</div>'
+        });
+        map.addMarker({
+            lat: 54.920695,
+            lng: 37.420146,
+            title: 'ЭЛИТ-тур'
+        });
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter32625330 = new Ya.Metrika({
+                        id: 32625330,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {
+                }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+
+
+    </script>
+{% endblock js_scripts %}
+
+</body>
+</html>

@@ -1,0 +1,1407 @@
+/* CSS reset */
+.webim-root,
+.webim-root div,
+.webim-root span,
+.webim-root applet,
+.webim-root object,
+.webim-root iframe,
+.webim-root h1,
+.webim-root h2,
+.webim-root h3,
+.webim-root h4,
+.webim-root h5,
+.webim-root h6,
+.webim-root p,
+.webim-root blockquote,
+.webim-root pre,
+.webim-root a,
+.webim-root abbr,
+.webim-root acronym,
+.webim-root address,
+.webim-root big,
+.webim-root cite,
+.webim-root code,
+.webim-root del,
+.webim-root dfn,
+.webim-root em,
+.webim-root img,
+.webim-root ins,
+.webim-root kbd,
+.webim-root q,
+.webim-root s,
+.webim-root samp,
+.webim-root small,
+.webim-root strike,
+.webim-root strong,
+.webim-root sub,
+.webim-root sup,
+.webim-root tt,
+.webim-root var,
+.webim-root b,
+.webim-root u,
+.webim-root i,
+.webim-root center,
+.webim-root dl,
+.webim-root dt,
+.webim-root dd,
+.webim-root ol,
+.webim-root ul,
+.webim-root li,
+.webim-root fieldset,
+.webim-root form,
+.webim-root label,
+.webim-root legend,
+.webim-root table,
+.webim-root caption,
+.webim-root tbody,
+.webim-root tfoot,
+.webim-root thead,
+.webim-root tr,
+.webim-root th,
+.webim-root td,
+.webim-root article,
+.webim-root aside,
+.webim-root canvas,
+.webim-root details,
+.webim-root embed,
+.webim-root figure,
+.webim-root figcaption,
+.webim-root footer,
+.webim-root header,
+.webim-root hgroup,
+.webim-root menu,
+.webim-root nav,
+.webim-root output,
+.webim-root ruby,
+.webim-root section,
+.webim-root summary,
+.webim-root time,
+.webim-root mark,
+.webim-root audio,
+.webim-root video {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    position: static;
+    text-transform: none;
+}
+
+.webim-root li:before,
+.webim-root li:after {
+    content: none;
+}
+
+.webim-root {
+    color: #000;
+    font: 11px/1.2em normal Arial, Helvetica, sans-serif;
+    -webkit-backface-visibility: hidden; /* WebKit negative z-index fix */
+}
+
+.webim-root ol,
+.webim-root ul {
+    list-style: none;
+}
+
+.webim-root blockquote,
+.webim-root q {
+    quotes: none;
+}
+
+.webim-root blockquote:before,
+.webim-root blockquote:after,
+.webim-root q:before,
+.webim-root q:after {
+    content: '';
+    content: none;
+}
+
+.webim-root table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.webim-root textarea {
+    box-sizing: content-box;
+}
+
+.webim-root b,
+.webim-root strong {
+    font-weight: bold;
+}
+
+.webim-root img {
+    width: auto;
+}
+
+/* General */
+.webim-root .webim-clear {
+    clear: both;
+}
+
+.webim-root .webim-description {
+    font-size: 13px;
+    line-height: 1.3em;
+    margin-bottom: 15px;
+}
+
+.webim-root .webim-draggable {
+    cursor: move;
+}
+
+.webim-root .webim-action {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.webim-root .webim-btn {
+    border: 1px solid #dfdfdf;
+    border-radius: 6px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 36px;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.webim-root .webim-btn.webim-sm {
+    border-radius: 3px;
+    line-height: 24px;
+}
+
+.webim-root .webim-btn.webim-info {
+    background: #0067be;
+    border: 1px solid #2d5ebb;
+    color: #fff;
+}
+
+.webim-root .webim-btn.webim-success {
+    background: #069a24;
+    border: 1px solid #00813b;
+    color: #fff;
+}
+
+.webim-root .webim-btn.webim-danger {
+    background: #e40022;
+    border: 1px solid #880000;
+    color: #fff;
+}
+
+.webim-root .webim-btn[disabled="disabled"] {
+    cursor: default;
+}
+
+.webim-root .webim-btn.webim-btn-send {
+    color: #fff;
+    background: #069a24;
+    border: 1px solid #00813b;
+}
+
+.webim-root .webim-group-btn {
+    text-align: justify;
+    line-height: 0;
+    font-size: 1px;
+    text-justify: newspaper; /* IE 6-7*/
+    zoom:1;
+    text-align-last: justify;
+}
+
+.webim-root .webim-group-btn:after {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+}
+
+.webim-root .webim-form-control.webim-group-btn > .webim-btn {
+    width: auto;
+}
+
+.webim-root .webim-group-btn.webim-group-btn-2 > .webim-btn {
+    width: 49%;
+}
+
+.webim-root .webim-group-btn.webim-group-btn-3 > .webim-btn {
+    width: 33%;
+}
+
+/* Forms */
+.webim-root .webim-error-message {
+    color: #a94442;
+}
+
+.webim-root .webim-form.webim-form-horizontal .webim-form-control {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.webim-root .webim-form-control {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.webim-root .webim-form-control:last-child {
+    margin-bottom: 0;
+}
+
+.webim-root .webim-form-control .webim-error-message {
+    background: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    padding: 0 2px;
+    position: absolute;
+    bottom: -7px;
+    right: 8px;
+}
+
+.webim-root .webim-form-control > .webim-label {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.webim-root .webim-form-control > .webim-label textarea {
+    vertical-align: middle;
+}
+
+.webim-root .webim-form-control > .webim-label > .webim-label-text {
+    cursor: text;
+    font-size: 13px;
+    line-height: 36px;
+    position: absolute;
+    left: 10px;
+    white-space: pre;
+    z-index: 100;
+}
+
+.webim-root .webim-form-control > .webim-label > .webim-label-text,
+.webim-root .webim-form-control > .webim-label > .webim-label-text * {
+    color: #888;
+}
+
+.webim-root .webim-form-control > .webim-label .webim-optional-postfix {
+    margin-left: 5px;
+}
+
+.webim-root .webim-form-control > .webim-control-actions {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.webim-root .webim-form-control textarea,
+.webim-root .webim-form-control input[type="text"],
+.webim-root .webim-form-control select {
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #000;
+    width: 100%;
+}
+
+.webim-root .webim-error textarea,
+.webim-root .webim-error input[type="text"],
+.webim-root .webim-error select {
+    border-color: #a94442;
+}
+
+.webim-root .webim-success textarea,
+.webim-root .webim-success input[type="text"],
+.webim-root .webim-success select {
+    border-color: #3c763d;
+}
+
+.webim-root .webim-form-control textarea:focus,
+.webim-root .webim-form-control select:focus,
+.webim-root .webim-form-control input[type="text"]:focus {
+    border-color:#1171c2;
+    outline: none;
+}
+
+.webim-root .webim-form-control input[type="text"],
+.webim-root .webim-form-control select {
+    line-height: 36px;
+    padding: 0 10px;
+    height: 36px;
+}
+
+.webim-root .webim-form-control select {
+    height: 36px;
+}
+
+.webim-root .webim-form-control textarea {
+    padding: 10px;
+}
+
+.webim-root .webim-form-control .webim-btn {
+    width: 100%;
+}
+
+.webim-root .webim-input-group {
+    position: relative;
+    width: 100%;
+}
+
+.webim-root .webim-input-group > * {
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    border-width: 1px 0;
+}
+
+.webim-root .webim-input-group > * {
+    line-height: 36px;
+    height: 36px;
+}
+
+.webim-root .webim-input-group > .webim-input-group-main,
+.webim-root .webim-input-group > .webim-input-group-main > * {
+    height: 34px;
+    line-height: 34px;
+}
+
+.webim-root .webim-input-group.webim-input-group-left > *:last-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-left-width: 1px;
+}
+
+.webim-root .webim-input-group.webim-input-group-left > *:first-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-right-width: 1px;
+}
+
+.webim-root .webim-input-group.webim-input-group-left > * {
+    float: right;
+}
+
+.webim-root .webim-input-group.webim-input-group-left > .webim-input-group-main {
+    display: block;
+    float: none;
+    padding: 0 12px;
+}
+
+.webim-root .webim-input-group > .webim-input-group-main > * {
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+.webim-root .webim-input-group input:focus,
+.webim-root .webim-input-group button:focus {
+    outline: none;
+}
+
+.webim-root .webim-captcha .webim-captcha-image {
+    box-sizing: border-box;
+    border: 1px solid #dfdfdf;
+    overflow: hidden;
+    width: 100% !important;
+}
+
+.webim-root .webim-captcha .webim-captcha-image img {
+    max-width: 300px;
+    vertical-align: middle;
+    width: 100% !important;
+}
+
+/* Icons */
+
+.webim-root .webim-icon {
+    display: inline-block;
+}
+
+.webim-root .webim-btn > .webim-icon,
+.webim-root .webim-action > .webim-icon {
+    vertical-align: middle;
+}
+
+.webim-root .webim-icon.webim-icon-send {
+    background: url('/v/images/btn_send.png') top left no-repeat;
+    width: 10px;
+    height: 11px;
+}
+
+.webim-root .webim-icon.webim-icon-actions {
+    background: url('/v/images/btn_actions.png') top left no-repeat;
+    width: 4px;
+    height: 18px;
+}
+
+.webim-root .webim-icon.webim-icon-call {
+    background: url('/v/images/ico_call.png') top left no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.webim-root .webim-icon.webim-icon-sound {
+    background: url('/v/images/ico_sound.png') top left no-repeat;
+    width: 16px;
+    height: 15px;
+}
+
+.webim-root .webim-icon.webim-icon-sound-off {
+    background: url('/v/images/ico_sound_off.png') top left no-repeat;
+    width: 16px;
+    height: 17px;
+}
+
+.webim-root .webim-icon.webim-icon-pencil {
+    background: url('/v/images/ico_pencil.png') top left no-repeat;
+    width: 15px;
+    height: 15px;
+}
+
+.webim-root .webim-icon.webim-icon-mail {
+    background: url('/v/images/ico_mail.png') top left no-repeat;
+    width: 15px;
+    height: 11px;
+}
+
+.webim-root .webim-icon.webim-icon-rate {
+    background: url('/v/images/ico_rate.png') top left no-repeat;
+    width: 13px;
+    height: 13px;
+}
+
+.webim-root .webim-icon.webim-icon-operator-rate {
+    background: url('/v/images/ico_operator_rate.png') top left no-repeat;
+    width: 26px;
+    height: 25px;
+}
+
+.webim-root .webim-icon.webim-icon-upload {
+    background: url('/v/images/ico_upload.png') top left no-repeat;
+    width: 12px;
+    height: 15px;
+}
+
+.webim-root .webim-icon.webim-icon-attach {
+    background: url('/v/images/ico_attach.png') top left no-repeat;
+    width: 7px;
+    height: 15px;
+}
+
+.webim-root .webim-icon.webim-icon-check {
+    background: url('/v/images/ico_check.png') top left no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.webim-root .webim-icon.webim-icon-loading {
+    background: url('/v/images/throbber-small.gif') top left no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.webim-root .webim-loading-throbber {
+    background: url('/v/images/throbber-small.gif') center center no-repeat;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+/* State */
+.webim-root .webim-on-ready,
+.webim-root .webim-on-success,
+.webim-root .webim-on-error,
+.webim-root .webim-on-process {
+    display: none;
+}
+
+.webim-root .webim-ready .webim-on-ready,
+.webim-root .webim-success .webim-on-success,
+.webim-root .webim-process .webim-on-process,
+.webim-root .webim-error .webim-on-error {
+    display: inherit;
+}
+
+.webim-root .webim-progressbar-wrapper {
+    background: #aaa;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 2px;
+}
+
+.webim-root .webim-progressbar-wrapper .webim-progressbar {
+    width: 0;
+    height: 100%;
+    background: #3c763d;
+}
+
+
+/* Chat */
+#webim_chat {
+    position: fixed;
+    z-index: 99999;
+}
+
+.webim-root > .webim-chat-block {
+    margin-right: 30px;
+}
+
+.webim-root > .webim-control-block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22px;
+}
+
+.webim-root > .webim-control-block .webim-action {
+    background: #fff;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+}
+
+.webim-root > .webim-chat-block > .webim-chat {
+    background: #fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.webim-root > .webim-chat-block > .webim-chat,
+.webim-root > .webim-control-block .webim-action {
+    border: 1px solid #dfdfdf;
+}
+
+.webim-root .webim-header {
+    padding: 10px 12px;
+}
+
+.webim-root .webim-header > .webim-account-block {
+    float: left;
+}
+
+.webim-root .webim-header > .webim-operator-block {
+    text-align: center;
+}
+
+.webim-root .webim-header > .webim-avatar {
+    float: right;
+    position: relative;
+}
+
+.webim-root .webim-header > .webim-avatar > img {
+    border-radius: 50%;
+}
+
+.webim-root .webim-header > .webim-avatar > .webim-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.webim-root .webim-header > .webim-account-block > .webim-logo,
+.webim-root .webim-header > .webim-operator-block,
+.webim-root .webim-header > .webim-avatar {
+    line-height: 32px;
+}
+
+.webim-root .webim-header > .webim-account-block > .webim-logo > *,
+.webim-root .webim-header > .webim-operator-block > *,
+.webim-root .webim-header > .webim-avatar > * {
+    vertical-align: middle;
+    line-height: 14px;
+}
+
+.webim-root .webim-operator-block > .webim-operator {
+    display: inline-block;
+    text-align: left;
+}
+
+.webim-root .webim-operator > .webim-name {
+    color: #0067be;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.webim-root .webim-operator > .webim-title {
+    color: #454545;
+    display: block;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.webim-root .webim-body {
+    height: 100%;
+    position: relative;
+}
+
+.webim-root .webim-sections {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.webim-root .webim-section-online {
+    border-top: 1px solid #dfdfdf;
+}
+
+.webim-root .webim-dialogue-block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1px;
+    bottom: 68px;
+}
+
+.webim-root .webim-dialogue {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+    padding: 12px;
+}
+
+.webim-root .webim-dialogue .webim-message {
+    margin-bottom: 10px;
+    min-height: 38px;
+    position: relative;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-operator_busy-message,
+.webim-root .webim-dialogue .webim-message.webim-info-message {
+    min-height: inherit;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-contacts-message .webim-author-block,
+.webim-root .webim-dialogue .webim-message.webim-cont_req-message .webim-author-block,
+.webim-root .webim-dialogue .webim-message.webim-info-message .webim-author-block,
+.webim-root .webim-dialogue .webim-message.webim-operator_busy-message .webim-message-info,
+.webim-root .webim-dialogue .webim-message.webim-operator_busy-message .webim-author-block,
+.webim-root .webim-dialogue .webim-message .webim-date,
+.webim-root .webim-dialogue .webim-message .webim-author-block .webim-author-name,
+.webim-root .webim-dialogue .webim-message.webim-info-message .webim-message-info {
+    display: none;
+}
+
+.webim-root .webim-dialogue .webim-message .webim-message-info {
+    color: #9e9e9e;
+}
+
+.webim-root .webim-dialogue .webim-message .webim-author-block {
+    position: absolute;
+    top: 0;
+}
+
+.webim-root .webim-dialogue .webim-message .webim-author-block .webim-author-avatar img {
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+}
+
+.webim-root .webim-dialogue .webim-message .webim-message-body {
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 1.2em;
+    padding: 8px;
+    position: relative;
+    text-align: left;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_operator-message .webim-author-block,
+.webim-root .webim-dialogue .webim-message.webim-operator-message .webim-author-block,
+.webim-root .webim-dialogue .webim-message.webim-file_operator-message .webim-message-info,
+.webim-root .webim-dialogue .webim-message.webim-operator-message .webim-message-info {
+    left: 0;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_operator-message .webim-message-body,
+.webim-root .webim-dialogue .webim-message.webim-operator-message .webim-message-body {
+    color: #fff;
+    margin-left: 48px;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_operator-message .webim-message-body,
+.webim-root .webim-dialogue .webim-message.webim-operator-message .webim-message-body,
+.webim-root .webim-dialogue .webim-message.webim-file_operator-message .webim-message-body:before,
+.webim-root .webim-dialogue .webim-message.webim-operator-message .webim-message-body:before {
+    background: #0067be;
+    border-color: #0067be;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_operator-message .webim-message-body:before,
+.webim-root .webim-dialogue .webim-message.webim-operator-message .webim-message-body:before {
+    background: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-style: solid;
+    border-width: 4px 5px 4px 0;
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 3px;
+    width: 0;
+    height: 0;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_operator-message .webim-message-info,
+.webim-root .webim-dialogue .webim-message.webim-operator-message .webim-message-info {
+    text-align: right;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_operator-message .webim-message-body a,
+.webim-root .webim-dialogue .webim-message.webim-operator-message .webim-message-body a {
+    color: #fff;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-info-message .webim-message-body,
+.webim-root .webim-dialogue .webim-message.webim-contacts-message .webim-message-body,
+.webim-root .webim-dialogue .webim-message.webim-cont_req-message .webim-message-body {
+    background: #c1c1c1;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-operator_busy-message .webim-message-body {
+    background: #ff0;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_visitor-message .webim-author-block,
+.webim-root .webim-dialogue .webim-message.webim-file_visitor-message .webim-message-info,
+.webim-root .webim-dialogue .webim-message.webim-visitor-message .webim-author-block,
+.webim-root .webim-dialogue .webim-message.webim-visitor-message .webim-message-info {
+    right: 0;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_visitor-message .webim-message-body,
+.webim-root .webim-dialogue .webim-message.webim-visitor-message .webim-message-body {
+    margin-right: 48px;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_visitor-message .webim-message-info,
+.webim-root .webim-dialogue .webim-message.webim-visitor-message .webim-message-info {
+    text-align: left;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_visitor-message .webim-message-body,
+.webim-root .webim-dialogue .webim-message.webim-visitor-message .webim-message-body,
+.webim-root .webim-dialogue .webim-message.webim-file_visitor-message .webim-message-body:after,
+.webim-root .webim-dialogue .webim-message.webim-visitor-message .webim-message-body:after {
+    background: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.webim-root .webim-dialogue .webim-message.webim-file_visitor-message .webim-message-body:after,
+.webim-root .webim-dialogue .webim-message.webim-visitor-message .webim-message-body:after {
+    background: transparent;
+    border-style: solid;
+    border-width: 4px 0 4px 5px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    content: '';
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: 3px;
+    width: 0;
+    height: 0;
+}
+
+.webim-root .webim-dialogue .webim-embedded {
+    background: #f5f5f5;
+    position: relative;
+    margin: 0 -12px 10px;
+    padding: 12px;
+}
+
+.webim-root .webim-dialogue .webim-embedded .webim-embedded-actions {
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.webim-root .webim-dialogue .webim-embedded .webim-embedded-header {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.webim-root .webim-dialogue-status-block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.webim-root .webim-dialogue-status {
+    color: #9e9e9e;
+    font-size: 11px;
+    text-align: center;
+}
+
+.webim-root .webim-dialogue-message-block {
+    padding: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.webim-root .webim-dialogue-message {
+    border: 1px solid #dfdfdf;
+    border-radius: 6px;
+    box-sizing: content-box;
+    height: 22px;
+    max-height: 100px;
+    padding: 10px 8px;
+    position: relative;
+}
+
+.webim-root .webim-dialogue-message .webim-textarea-wrapper {
+    position: absolute;
+    top: 14px;
+    bottom: 10px;
+    left: 8px;
+    right: 50px;
+    overflow: hidden;
+}
+
+.webim-root .webim-dialogue-message textarea {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 13px;
+    line-height: 15px;
+    overflow: auto;
+    padding: 0;
+    resize: none;
+    width: 100%;
+    height: 100%;
+}
+
+.webim-root .webim-dialogue-message button:focus,
+.webim-root .webim-dialogue-message textarea:focus {
+    outline: none;
+}
+
+.webim-root .webim-dialogue-message .webim-action {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    float: right;
+    height: 22px;
+    line-height: 22px;
+    padding: 1px 6px;
+}
+
+.webim-root .webim-section .webim-visitor-info {
+    background: #fff;
+    border-top: 1px solid #dfdfdf;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.webim-root .webim-sections > .webim-section.webim-popups-block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 9000;
+}
+
+.webim-root .webim-popup {
+    background: #fff;
+    border-top: 1px solid #dfdfdf;
+    position: relative;
+}
+
+.webim-root .webim-popup .webim-popup-actions {
+    color: #888;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 100;
+}
+
+.webim-root .webim-popup .webim-popup-actions .webim-close-action {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 15px;
+}
+
+.webim-root .webim-chat-actions-block .webim-chat-actions .webim-chat-action {
+    color: #0067be;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 15px;
+}
+
+.webim-root .webim-chat-actions-block .webim-chat-actions .webim-chat-action:first-child {
+    padding-top: 12px;
+}
+
+.webim-root .webim-chat-actions-block .webim-chat-actions .webim-chat-action:last-child {
+    padding-bottom: 12px;
+}
+
+.webim-root .webim-chat-actions-block .webim-chat-actions .webim-chat-action:hover {
+    background: #f0f0f0;
+}
+
+.webim-root .webim-chat-actions-block .webim-chat-actions .webim-chat-action .webim-icon {
+    background-position: top center;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.webim-root .webim-popup.webim-contact-block {
+    padding: 12px;
+}
+
+.webim-root .webim-operator-rate > * {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.webim-root .webim-operator-rate .webim-enabled .webim-icon {
+    background-position: left bottom;
+}
+
+.webim-root .webim-rate-block .webim-operator-rate,
+.webim-root .webim-rate-block .webim-rate-state {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.webim-root .webim-rate-block .webim-rate-state {
+    margin-left: 5px;
+}
+
+.webim-root .webim-rate-block .webim-rate-error {
+    margin-top: 5px;
+}
+
+.webim-root .webim-send-to-email-block .webim-send-to-email-state {
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.webim-root .webim-send-to-email-block .webim-send-to-email-state .webim-icon {
+    vertical-align: middle;
+}
+
+.webim-root .webim-send-to-email-block .webim-send-to-email-error {
+    margin-top: 5px;
+}
+
+.webim-root .webim-file-list {
+    border: 1px dashed #dfdfdf;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.webim-root .webim-dialogue-message-block .webim-file-list {
+    list-style: none;
+    max-height: 80px;
+    overflow: auto;
+}
+
+.webim-root .webim-file-list .webim-attached-file {
+    font-size: 13px;
+    line-height: 1.4em;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.webim-root .webim-attached-file .webim-file-info {
+    line-height: 20px;
+    margin-right: 25px;
+    position: relative;
+}
+
+.webim-root .webim-file-info .webim-progressbar-wrapper {
+    background: #dadada;
+    border: 1px solid #63c62d;
+    border-radius: 3px;
+    height: 16px;
+    position: absolute;
+    top: 1px;
+}
+
+.webim-root .webim-file-info .webim-progressbar {
+    background: #7bd262;
+}
+
+.webim-root .webim-attached-file.webim-error .webim-progressbar-wrapper {
+    border: 1px solid #ebccd1;
+    color: #a94442;
+}
+
+.webim-root .webim-attached-file.webim-error .webim-progressbar {
+    background: #f2dede;
+}
+
+.webim-root .webim-file-info .webim-file-name {
+    display: block;
+    margin-left: 2px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.webim-root .webim-file-info .webim-file-size {
+    position: absolute;
+    top: 0;
+    right: 2px;
+}
+
+.webim-root .webim-attached-file .webim-file-upload-state {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.webim-root .webim-attached-file .webim-file-upload-actions {
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.webim-root .webim-attached-file .webim-file-upload-error {
+    color: #a94442;
+    font-size: 11px;
+    line-height: 1em;
+}
+
+.webim-root .webim-resizable {
+    overflow-y: auto;
+}
+
+.webim-root .webim-section-throbber {
+    background: url('/v/images/throbber.gif') center no-repeat;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.webim-root .webim-offline-block,
+.webim-root .webim-department-select-block,
+.webim-root .webim-operator-select-block,
+.webim-root .webim-question-block {
+    padding: 6px 12px 12px;
+}
+
+.webim-root .webim-overlays-wrapper {
+    background: url('/v/images/bg_overlay.png') repeat;
+    display: table;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.webim-root .webim-overlays-wrapper .webim-overlay {
+    color: #000;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+
+.webim-root .webim-overlay .webim-overlay-actions {
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.webim-root .webim-overlay .webim-overlay-header {
+    border-top: 1px solid #dfdfdf;
+    font-size: 16px;
+    padding: 12px;
+    position: relative;
+}
+
+.webim-root .webim-overlay .webim-overlay-header,
+.webim-root .webim-overlay .webim-overlay-body {
+    background: #fff;
+}
+
+.webim-root .webim-overlay .webim-overlay-body {
+    border-bottom: 1px solid #dfdfdf;
+    padding: 0 12px 12px;
+}
+
+.webim-root .webim-notifications-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 80;
+}
+
+.webim-root .webim-notice {
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.webim-root .webim-notification {
+    background: #fff;
+    border: 1px solid #000;
+    border-width: 1px 0;
+    color: #000;
+    font-size: 12px;
+    padding: 10px;
+    position: relative;
+}
+
+.webim-root .webim-notification.webim-success {
+    background: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.webim-root .webim-notice.webim-notice-error,
+.webim-root .webim-notification.webim-alert {
+    background: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+.webim-root .webim-notification .webim-notification-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.webim-root .webim-notification .webim-notification-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.webim-root .webim-footer {
+    background: #f0f0f0;
+    border-top: 1px solid #dfdfdf;
+    padding: 15px 12px 13px;
+}
+
+.webim-root .webim-copyright {
+    background: url('/v/images/copyright.png') top left no-repeat;
+    width: 49px;
+    height: 8px;
+}
+
+.webim-root .webim-powered-by {
+    font-style: italic;
+}
+
+.webim-root .webim-powered-by a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Alerts */
+.webim-root.webim-alert-container {
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100001;
+}
+
+.webim-root.webim-alert-container .webim-alert-overlay {
+    background: rgba(127,127,127, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.webim-root.webim-alert-container .webim-alert {
+    background: #fff;
+    margin: 20px auto 0;
+    max-width: 300px;
+    padding: 12px;
+    position: relative;
+    width: 90%;
+}
+
+.webim-root.webim-alert-container .webim-alert-buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.webim-root.webim-alert-container .webim-alert-buttons .webim-btn {
+    width: auto;
+}
+
+/* Separate mode */
+.webim-separate-window {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.webim-separate-window .webim-root > .webim-control-block {
+    display: none;
+}
+
+.webim-separate-window .webim-root > .webim-chat-block {
+    margin-right: 0;
+}
+
+.webim-separate-window .webim-root .webim-draggable {
+    cursor: default;
+}
+
+/* External libs */
+/*
+ * jQuery UI Resizable 1.8.17
+ */
+.webim-root .ui-resizable-handle {
+    position: absolute;
+    font-size: 1px;
+    z-index: 99999;
+    display: block;
+}
+
+.webim-root .ui-resizable-disabled .ui-resizable-handle,
+.webim-root .ui-resizable-autohide .ui-resizable-handle {
+    display: none;
+}
+
+.webim-root .ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+}
+
+.webim-root .ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0;
+    height: 100%;
+}
+
+.webim-root .ui-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px;
+}
+
+.webim-root .ui-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url(https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/images/ui-icons_222222_256x240.png) /*{iconsContent}*/;
+}
+
+.webim-root .ui-icon-gripsmall-diagonal-se {
+    background-position: -64px -224px;
+}
+
+/* Plupload */
+.webim-root .moxie-shim {
+    cursor: pointer;
+}
+
+/*###################  Notifications ##################*/
+
+.webim_notification_div {
+    z-index: 999999;
+    position: fixed;
+    background-color: rgba(234, 234, 234, 0.93);
+    border: 1px solid #C1C1C1;
+    border-bottom: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: normal;
+    /*overflow: auto;*/
+}
+
+.webim_notification_div .webim_avatar_img {
+    /*min-height: 85%;*/
+    /*min-width: 85%;*/
+    /*border-radius: 15px;*/
+    position: absolute;
+    margin: auto;
+    top: 5%;
+    left: 0;
+    right: 0;
+}
+
+.webim_notification_div .webim_images {
+    /*background-color: #faff51;*/
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 90%;
+    bottom: 0;
+    border-right: 1px solid #C1C1C1;
+}
+
+.webim_notification_div .webim_close {
+    /*background-color: #ff2632;*/
+
+    text-decoration: none;
+    color: #767676;
+    position: absolute;
+    left: 90%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    overflow: hidden;
+    /*margin-top: 10px;*/
+}
+
+.webim_notification_div .webim_notification_text {
+    padding-left: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    cursor: pointer;
+    color: #424242;
+}
+
+.webim_notification_div .webim_notification_text .webim_notification_body {
+    /*background-color: #0000ff;*/
+}
+
+.webim_notification_div .webim_notification_text .webim_notification_name {
+    font-style: italic;
+    /*background-color: #6bffa3;*/
+    font-weight: bold;
+}

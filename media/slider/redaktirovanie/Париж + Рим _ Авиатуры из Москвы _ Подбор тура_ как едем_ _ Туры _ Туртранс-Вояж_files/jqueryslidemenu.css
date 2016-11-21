@@ -1,0 +1,98 @@
+/*.jqueryslidemenu{
+font: bold 12px Verdana;
+background: #414141;
+width: 800px;
+margin:0 auto;
+}
+
+.jqueryslidemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a, .jqueryslidemenu ul li span{
+border-left: 1px solid #DBDCDD;
+color: #4F4F4F;
+display: block;
+font-size: 13px;
+font-weight: bold;
+/*height: 13px;*/
+cursor: pointer;
+padding: 5px 8px 7px 7px;
+text-decoration: none;}
+
+* html .jqueryslidemenu ul li a, * html .jqueryslidemenu ul li span{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited
+{color: #4F4F4F;}
+
+.jqueryslidemenu ul li a:hover, .jqueryslidemenu ul li span:hover{
+ /*tab link background during hover state*/
+color: #FD6601;
+text-decoration: underline;
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+display: block;
+left: 0px;
+position: absolute;
+visibility: hidden;}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float: none;}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a, .jqueryslidemenu ul li ul li span{
+/*background: #F0F0F0 url(/images/tourtrans/upper-bullet.png) no-repeat 5px 50%;*/
+background: #F0F0F0 url(/images/tourtrans/upper-bullet.png) no-repeat 5px 10px;
+border: 1px solid white;
+font: normal normal normal 11px/normal Verdana;
+margin: 0px;
+padding: 11px 5px 11px 25px;
+width: 250px;}
+
+.jqueryslidemenu ul li ul li a:hover, .jqueryslidemenu ul li ul li span:hover{ /*sub menus hover style*/
+color: black;
+background-color: #d4d4d4;
+text-decoration: none;
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+position: absolute;
+right: 4px;
+top: 12px;}
+.rightarrowclass{
+position: absolute;
+right: 5px;
+top: 13px;}
+
+
+/* ADMIN PANEL menu view */
+body.adminka .jqueryslidemenu{margin-top: 15px;}
+body.adminka .jqueryslidemenu ul {padding-left: 0;}
+.jqueryslidemenu ul li ul{z-index: +5000; list-style: none;}
+
+
+
+

@@ -1,0 +1,14 @@
+<div class="head-slider" style="height: 270px; width: 100%">
+    {% for slider in sliders %}
+        {% if slider.active %}
+       <div>
+            <img src="{{ MEDIA_URL }}{{ slider.img }}" height="300" width="100%">
+            <div class="slider-content1 cont" style="background: {{ slider.substrate_color }};">
+                <p class="slider-h1" style="color: {{ slider.title_color }}">{{ slider.title|safe }}</p>
+                <p class="slider-h2" style="color: {{ slider.text_color }}">{{ slider.text|safe }}</p>
+                <p class="slider-h-up"><a href="{{ slider.category.url }}" style="color: {{ slider.desc_color }}">Подробнее...</a></p>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>

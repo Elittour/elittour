@@ -1,0 +1,40 @@
+{% load custom_tags %}
+
+{% for tour in tours %}
+    {% if forloop.counter != 1 %}<hr>{% endif %}
+        <p>
+            <div style="float: left; margin: 5px">
+                {% if tour.img %}
+                    <a href="{{ MEDIA_URL }}{{ tour.img }}">
+                        <img src="{{ MEDIA_URL }}{{ tour.img }}" width="285">
+                    </a>
+                {% else %}
+                    <img src="{{ STATIC_URL }}img/no_img.png" width="285">
+                {% endif %}
+            </div>
+
+            <h2>{{ tour.name|truncatewords:20 }}</h2>
+            {{ tour.description|truncatechars:100 }}
+            <p><a href="{{ tour.category.all|get_url_for_category_name }}">подробнее ...</a></p>
+
+        </p>
+
+{% endfor %}
+{% for article in articles %}
+    {% if forloop.counter != 1 %}<hr>{% endif %}
+    <p>
+        <div style="float: left; margin: 5px">
+            {% if article.img %}
+                <a href="{{ MEDIA_URL }}{{ article.img }}">
+                    <img src="{{ MEDIA_URL }}{{ article.img }}" width="285">
+                </a>
+            {% else %}
+                <img src="{{ STATIC_URL }}img/no_img.png" width="285">
+            {% endif %}
+        </div>
+
+        <h2>{{ article.name|truncatewords:20|safe }}</h2>
+        {{ article.article|truncatewords:30|safe }}
+        <p><a href="{{ article.category.all|get_url_for_category_name }}"> подробнее ...</a></p>
+    </p>
+{% endfor %}

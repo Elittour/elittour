@@ -1,0 +1,31 @@
+{% extends 'elittour/base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+    <div id="content">
+        {% block article %}
+            {{ block.super }}
+        {% endblock article %}
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        {% block search %}
+                        {% endblock %}
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

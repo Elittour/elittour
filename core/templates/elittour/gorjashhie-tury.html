@@ -1,0 +1,27 @@
+{% extends 'elittour/base.html' %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Горящие туры</title>
+    <link href="{{ STATIC_URL }}elittour/img/favicon.ico" rel="shortcut icon"/>
+{% endblock head %}
+
+{% block content %}
+    <div id="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                         <div>
+                              <h1>Подбор горящего тура</h1>
+                         </div>
+   <!--BEGIN OF MODULE BLOCK-->
+<script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/85540/hot_tourV2?style=default"></script>
+<!--END OF MODULE BLOCK-->
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+{% endblock content %}

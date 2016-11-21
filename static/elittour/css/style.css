@@ -1,0 +1,373 @@
+body{
+    width:100%;
+    height:100%;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+.logo #one {
+    color: #BD0f0f;
+}
+#content{
+    margin: 0 0 0 0;
+    padding: 1 1 1 1;
+}
+.logo #two {
+text-shadow: #BD0f0f 1px 0px, #BD0f0f 1px 1px, #BD0f0f 0px 1px, #BD0f0f -1px 1px, #BD0f0f -1px 0px, #BD0f0f -1px -1px, #BD0f0f 0px -1px, #BD0f0f 1px -1px;
+    font-size: 18px;
+    color: white;
+}
+.header{
+    font-size: 15px;
+    color: #5c5c5e;
+    padding-top: 7px;
+}
+
+.slider {
+    height: 250px;
+}
+#sitemenu {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1F94C0;
+}
+#sitemenu li{
+    padding: 0;
+    margin: 0
+}
+.slide {
+    max-width: 100%;
+    max-height: 350px;
+    min-height: 350px;
+}
+
+.white{
+    color: #ffffff;
+}
+
+.open #tour_type{
+    background-color: #009999;
+    color: white;
+}
+.open #tour_type:hover{
+    background-color: #009090;
+    color: white;
+}
+
+footer {
+    background-color: #0ba288;
+    color: white;
+}
+.cont {
+    padding: 20px;
+}
+.no_cont{
+    padding: 0;
+    margin: 0;
+}
+.slider-content, .slider-content1{
+    padding-top: 5px;
+    background: rgba(20, 255, 231, 0.29);
+    position:relative;
+    bottom:290px;
+    float: right !important;
+    max-width: 500px;
+    min-height: 280px;
+    max-height: 280px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+    min-width: 500px;
+}
+.slider-content1{
+  background: rgba(255, 255, 255, 0);
+}
+
+.slider-h1{
+    font-size: 35px;
+    font-weight:bold;
+    text-align: center;
+    font-family:cursive;
+}
+.slider-h2{
+     font-size: 25px;
+     text-align: center;
+     font-family:cursive;
+}
+.slider-h3 {
+     font-size: 20px;
+     text-align: center;
+     color: white;
+}
+.slider-h-up, .slider-h-up a{
+     font-size: 20px;
+     text-align: right;
+     color: white;
+}
+
+#menu-body ul {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#menu-body .dropdown-menu {
+    font-size: 16px
+}
+
+.menu-main-item {
+    display: block;
+        font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 14px 10px;
+    background-color: #009999;
+}
+
+.menu-main-item:hover {
+    background-color: #009999;
+    font-weight: bold;
+    color: white;
+}
+#scroller {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    width: 40%;
+    margin-left: 50%;
+    opacity: 0.5;
+}
+
+#scroller:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    cursor: pointer;
+}
+
+#scroller span {
+    z-index: 2600;
+    position: absolute;
+    display: block;
+    left: 56px;
+    bottom: 0;
+    margin: 0 0 0 100%;
+    padding: 32px 12px 4px;
+    color: white;
+    background: #ff7111 url(http://alaev.info/wp-content/plugins/goupbutt/b-j-top.png) no-repeat 50% 11px;
+    border-radius: 2px;
+}
+.block_call {
+    background-color: #ff7111;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.block_call div {
+    padding-bottom: 3px;
+}
+
+.block2 {
+    color: white;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.menu_main_block{
+    background: #00cccc;
+}
+
+.item{
+    height: 350px;
+}
+
+.block3 {
+    min-height: 300px;
+    background: #0ba288;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.dn{
+    padding: 5px;
+}
+.dn a{
+    color:white;
+}
+
+
+.overlay{
+    background: #285e8e;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+}
+.help-block{
+    color: #f4f4f4;
+    font-size: 10px;
+}
+.form-group label{
+    display: none;
+}
+.padding-min{
+    padding: 1px;
+    margin: 1px;
+}
+textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    height: 50px;
+}
+.pn{
+    background-color: #65d0be;
+    min-height: 100%;
+    height: 150px;
+    border-radius: 10px;
+    color: #353535;
+}
+.pn div {
+    padding: 15px;
+}
+
+#basic_map{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.table-item{
+    padding: 7px;
+}
+
+.slick-dots li button:before
+{
+    font-size: 20px;
+    opacity: .80;
+    color: #ffffff;
+    text-shadow: #000000 0 0 10px;
+    line-height: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight:bold;
+    text-align: center;
+    color: red;
+}
+h2 {
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+    color:  #0ba288;
+}
+p {
+    text-indent: 30px;
+    font-size: 16px;
+    color: black;
+}
+.p-select {
+    text-indent: 0px;
+    font-size: 18px;
+    font-weight:bold;
+    text-align: center;
+    color: red;
+}
+.p-select-blue {
+    text-indent: 30px;
+    font-size: 16px;
+    font-weight:bold;
+    color: blue;
+}
+.p-select-red {
+    text-indent: 30px;
+    font-size: 16px;
+    font-weight:bold;
+    color: red;
+}
+
+.tab_all {
+    width:100%;
+    color:#ff0000;
+    background: #FFFFFF;
+}
+.tab_head {
+    height: 27px;
+    background:url(../../../static/elittour/img/bar_head.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.tab_foot {
+    height: 62px;
+    background:url(../../../static/elittour/img/bar_foot.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.tab_midl {
+    background-image:url(../../../static/elittour/img/bar.png);
+    color:black
+}
+.tab_select_red {
+    background:red;
+}
+.tab_select_blue, .central_td_text {
+    background: #00cccc;
+    _background: #2594ff;
+}
+.tab_select_red, .tab_select_blue {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-indent: 0px;
+}
+a:hover {
+     text-decoration: none;
+}
+.tab_text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color:black;
+    background-image:url(../../../static/elittour/img/bar.png);
+    text-decoration: none;
+    margin: 0 0 0 0;
+    padding: 0 0 15px 15px;
+}
+.tab_text_1{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color:black;
+    background-image:url(../../../static/elittour/img/bar.png);
+    text-decoration: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 15px;
+}
+
+
+.panel-body {
+    padding: 20px;
+    border-width: 0;
+}
+.central_tabl {
+    width: 100%; /* Ширина таблицы */
+    border: 0; /* Граница вокруг таблицы */
+    border-spacing: 7px; /* Расстояние между границ */
+}
+.central_td{
+    border: 10px solid #FFFFFF; /* Граница вокруг ячеек */
+    padding: 0px; /* Поля в ячейках */
+    border-spacing: 7px; /* Расстояние между границ */
+    heightb: 300px;
+ }
+.central_td_text {
+    border: 10px solid #FFFFFF; /* Граница вокруг ячеек */
+    padding: 0px; /* Поля в ячейках */
+    border-spacing: 7px; /* Расстояние между границ */
+    text-align: center;
+    height: 60px;
+}

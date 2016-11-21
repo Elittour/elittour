@@ -1,0 +1,54 @@
+{% extends 'elittour/base.html' %}
+{% load bootstrap3 %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Великий Устюг – к Деду Морозу</title>
+    <link href="{{ STATIC_URL }}elittour/img/favicon.ico" rel="shortcut icon"/>
+{% endblock head %}
+
+{% block content %}
+
+    <div id="content">
+    {% block article %}
+        {{ block.super }}
+    {% endblock article %}
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="responsive">
+                            <div id="df-root"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div>
+                            {% include 'elittour/items/right_cont.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block js_scripts %}
+    {{ block.super }}
+    <script>
+        (function (d, s, id) {
+            var js, dfjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//www.delfin-tour.ru/frame/2261.jss";
+            dfjs.parentNode.insertBefore(js, dfjs);
+        }(document, 'script', 'df-export'));
+    </script>
+{% endblock js_scripts %}

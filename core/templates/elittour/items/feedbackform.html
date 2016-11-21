@@ -1,0 +1,32 @@
+{% load bootstrap3 %}
+
+<script type="text/javascript">
+    function send_request() {
+        var frm = $('#feed_back_form');
+        frm.submit(function (ev) {
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function (data) {
+                    if (data != 'Ok'){
+                        $('#fb_form').html(data);
+                        alert('')
+
+                    }
+                    else {
+                        $('#fb_form').html('<h3>Ваша заявка была успешно отправлена</h3>')
+                    }
+                }
+            });
+            ev.preventDefault();
+        });
+    }
+</script>
+<div id="fb_form">
+<form id="feed_back_form" action="{% url 'create_person_request' %}" method="post">
+    {% csrf_token %}
+    {% bootstrap_form feedback_form %}
+    <button class="btn btn-success bottom-right" type="submit" onclick="send_request()">Отправить</button>
+</form>
+    </div>

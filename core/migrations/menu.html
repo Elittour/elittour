@@ -1,0 +1,111 @@
+<div id="menu-body">
+    <ul class="nav nav-tabs nav-justified navbar-right" style="margin-right: 0">
+        <li>
+            <div class="dropdown">
+                <a class="text-center menu-main-item" style="text-decoration: none;" href="/">
+                    Главная
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a class="text-center menu-main-item" style="text-decoration: none;" href="{% url 'search_tour'%}">
+                    Поиск тура
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a title="Открыть вложенное меню" id="tour_type" class="text-center menu-main-item" style="text-decoration: none;" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                    Туры по типам <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="tour_type" style="font-size: 16px">
+                    <li><a href="{% url 'gorjashhie' %}">Горящие туры</a></li>
+                    <li><a href="{% url 'bus-evropa' %}">Автобусные туры в Европу, Беларусь, СНГ</a></li>
+                    <li><a href="{% url 'moscow' %}">Автобусные туры в Москву</a></li>
+                    <li><a href="#">Автобусные туры в Санкт-Петербург</a></li>
+                    <li><a href="{% url 'russia' %}">Автобусные туры по России</a></li>
+                    <li><a href="#">Автобусом к морю</a></li>
+                    <li><a href="#">Пляжный отдых</a></li>
+                    <li><a href="{% url 'ekzotika' %}">Экзотические туры</a></li>
+                    <li><a href="#">Санатории России</a></li>
+                    <li><a href="#">Санатории Беларуси</a></li>
+                    <li><a href="#">Детские лагеря</a></li>
+                    <li><a href="#">Морские круизы</a></li>
+                    <li><a href="#">Речные круизы</a></li>
+                    <li><a href="#">Свадебные туры</a></li>
+                    <li><a href="#">Экскурсии для школьников</a></li>
+                    <li><a href="{% url 'ded' %}">Великий Устюг – к Деду Морозу</a>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a title="Открыть вложенное меню" id="tour_type" class="text-center menu-main-item"  style="text-decoration: none;" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                    Туры по странам <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="tour_type" style="font-size: 16px">
+                    <li><a href="{% url 'belarus' %}">Беларусь</a></li>
+                    <li><a href="{% url 'vengrija' %}">Венгрия</a></li>
+                    <li><a href="{% url 'grecija' %}">Греция</a></li>
+                    <li><a href="{% url 'egipet' %}">Египет</a></li>
+                    <li><a href="{% url 'israel' %}">Израиль</a></li>
+                    <li><a href="{% url 'indija' %}">Индия</a></li>
+                    <li><a href="{% url 'spain' %}">Испания</a></li>
+                    <li><a href="{% url 'italy' %}">Италия</a></li>
+                    <li><a href="{% url 'kipr' %}">Кипр</a></li>
+                    <li><a href="{% url 'norvegija' %}">Норвегия</a></li>
+                    <li><a href="{% url 'portugalija' %}">Португалия</a></li>
+                    <li><a href="{% url 'russia' %}">Россия</a></li>
+                    <li><a href="{% url 'finljandija' %}">Финляндия</a></li>
+                    <li><a href="{% url 'francija' %}">Франция</a></li>
+                    <li><a href="{% url 'tailand' %}">Таиланд</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a title="Открыть вложенное меню" id="tour_type" class="text-center menu-main-item"  style="text-decoration: none;"role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                    Туры по месяцам <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="tour_type">
+                    <li><a href="{% url 'january' %}">Январь</a></li>
+                    <li><a href="{% url 'february' %}">Февраль</a></li>
+                    <li><a href="{% url 'march' %}">Март</a></li>
+                    <li><a href="{% url 'april' %}">Апрель</a></li>
+                    <li><a href="{% url 'may' %}">Май</a></li>
+                    <li><a href="{% url 'june' %}">Июнь</a></li>
+                    <li><a href="{% url 'july' %}">Июль</a></li>
+                    <li><a href="{% url 'august' %}">Август</a></li>
+                    <li><a href="{% url 'september' %}">Сентябрь</a></li>
+                    <li><a href="{% url 'october' %}">Октябрь</a></li>
+                    <li><a href="{% url 'november' %}">Ноябрь</a></li>
+                    <li><a href="{% url 'december' %}">Декабрь</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a class="text-center menu-main-item" style="text-decoration: none;" href="{% url 'russia' %}">
+                    Туры по России
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a title="Открыть вложенное меню" id="tour_type" class="text-center menu-main-item " style="text-decoration: none;" role="button" data-toggle="dropdown" data-target="#" href="">
+                    Услуги <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="tour_type" style="font-size: 16px">
+                    <li><a href="{% url 'zagranpasport' %}">Документы на загранпаспорт</a></li>
+                    <li><a href="{% url 'viza' %}">Оформление визы</a></li>
+                    <li><a href="{% url 'bilet' %}">Продажа авиа и Ж/Д билетов</a></li>
+                    <li><a href="{% url 'transfer' %}">Трансфер в аэропорт и на железнодорожный вокзал</a></li>
+                    <li><a href="{% url 'avia' %}">Регистрация на авиарейс</a></li>
+                    <li><a href="{% url 'strashovka' %}">Туристическое страхование</a></li>
+                    <li><a href="{% url 'kredit' %}">Продажа туров в кредит</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
