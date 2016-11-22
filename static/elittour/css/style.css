@@ -58,6 +58,7 @@ footer {
 }
 .cont {
     padding: 20px;
+    overflow: hidden;
 }
 .no_cont{
     padding: 0;
