@@ -4,6 +4,7 @@
     function send_request() {
         var frm = $('#feed_back_form');
         frm.submit(function (ev) {
+            ev.preventDefault();
             $.ajax({
                 type: frm.attr('method'),
                 url: frm.attr('action'),
@@ -12,14 +13,12 @@
                     if (data != 'Ok'){
                         $('#fb_form').html(data);
                         alert('')
-
                     }
                     else {
                         $('#fb_form').html('<h3>Ваша заявка была успешно отправлена</h3>')
                     }
                 }
             });
-            ev.preventDefault();
         });
     }
 </script>

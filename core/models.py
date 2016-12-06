@@ -83,18 +83,18 @@ class Tour(models.Model):
     price = models.IntegerField(verbose_name=u'Цена (в рублях)')
     color_price = models.CharField(max_length=100, verbose_name=u'Цвет цены', default='black')
     comment = models.TextField(verbose_name=u'Комментарий', null=True, blank=True)
-    img = models.ImageField(upload_to='image-tour/', verbose_name=u'Изображение', null=True, blank=True)
+    img = models.ImageField(upload_to='image-tour', verbose_name=u'Изображение', null=True, blank=True)
     active = models.BooleanField(verbose_name=u'Выдавать на страницу', default=False)
     active_for_right = models.BooleanField(verbose_name=u'Выдавать в правом блоке', default=False)
 
     # TODO TODO TODO убрать эту дичь
     number = models.IntegerField(verbose_name=u'Код', help_text=u'Для фильтрации , формируется из даты')
 
-    def delete(self, using=None):
-        """ Логика удаления картинки тура """
-        if self.img:
-            os.remove(self.img.path)
-        super(Tour, self).delete(using=using)
+    # def delete(self, using=None):
+    #     """ Логика удаления картинки тура """
+    #     if self.img:
+    #         os.remove(self.img.path)
+    #     super(Tour, self).delete(using=using)
 
     def __unicode__(self):
         return u'%s' % self.name

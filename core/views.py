@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from core import models, forms
+from django.core.mail import send_mail
 
 
 class BasePage(TemplateView):
@@ -156,13 +157,20 @@ def create_person_request(request):
     c = {}
     form = forms.FeedbackForm(request.POST or None)
     if form.is_valid():
-        print form.cleaned_data
+        # print form.cleaned_data
+        name = form.cleaned_data.get('name')
+        email = form.cleaned_data.get('email')
+        phone_number = form.cleaned_data.get('phone_number')
+        message = form.cleaned_data.get('message')
         models.PersonRequest.objects.create(
-            name=form.cleaned_data.get('name'),
-            email=form.cleaned_data.get('email'),
-            phone_number=form.cleaned_data.get('phone_number'),
-            message=form.cleaned_data.get('message'),
+            name=name,
+            email=email,
+            phone_number=phone_number,
+            message=message,
         )
+        subject = u'Зыявка на экскурсию'
+        message = u'телефон: %s \n Имя: %s \n Email: %s \n Сообщение: %s' % (phone_number, name, email, message)
+        send_mail(subject, message, 'forward.70@yandex.ru', ['elitserp@yandex.ru, oli5vka@gmail.com'], fail_silently=False)
         return HttpResponse('Ok')
     c['feedback_form'] = form
     return render(request, 'elittour/items/feedbackform.html', c)
