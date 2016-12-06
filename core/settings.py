@@ -98,3 +98,11 @@ TEMPLATES = [
 # def change_code_gracefull_reload(sig):
 #     if autoreload.code_changed():
 #         uwsgi.reload()
+
+ADMIN_EMAIL = 'elittour@mail.ru'
+AUTH_USER_EMAIL_UNIQUE = True
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'workmailer2016@gmail.com'
+EMAIL_HOST_PASSWORD = 'positivefunction'
+EMAIL_PORT = 587
