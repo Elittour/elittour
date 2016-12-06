@@ -3,3 +3,5 @@
 *.pyc
 db.sqlite3
 wsgi.py
+media/
+static/img/
