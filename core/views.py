@@ -170,7 +170,7 @@ def create_person_request(request):
         )
         subject = u'Зыявка на экскурсию'
         message = u'телефон: %s \n Имя: %s \n Email: %s \n Сообщение: %s' % (phone_number, name, email, message)
-        send_mail(subject, message, 'forward.70@yandex.ru', ['godmen777@mail.ru, info@mai.ru'], fail_silently=False)
+        send_mail(subject, message, 'workmailer2016@gmail.com', [ 'elitserp@yandex.ru','godmen777@mail,ru', 'oli5vka@gmail.com'], fail_silently=False)
         return HttpResponse('Ok')
     c['feedback_form'] = form
     return render(request, 'elittour/items/feedbackform.html', c)
